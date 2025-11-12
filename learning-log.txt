@@ -1,0 +1,39 @@
+What I just did: Cloned a GitHub repo (my ListAI project) using git clone
+Why: I need the code on my computer to build it
+What I learned: git clone [paste-the-url-you-copied] [name-of-folder-you-want-to-have-cloned-repo]
+Problems I hit: None
+
+What I just did: Ran npm install
+Why: Downloads all the libraries/packages the project needs
+What I learned: "npm install" command downloads and installs packages (also known as modules or libraries) and their dependencies,
+making them available for use within a project. Some things npm install does is:
+    * Reads package.json: When executed in a directory that has package.json file, npm install reads the file to identify the
+      project's declared dependencies, which are listed under dependencies and devDependecies.
+    * Consults package-lock.json: If this file exists, the command uses it to ensure the exact versions of the packages previously
+      installed are re-installed, promoting consistency across different environments.
+    * Downloads packages: It fetches the required packages and their respective dependencies from npm registry.
+    * Creates node_modules folder: The downloaded packages are placed in this folder within the project directory. The folder has
+      all the necessary code for the project's dependencies.
+    * Handles dependencies recursively: If a package itself has dependencies, npm install recursively downloads and installs those.
+Problems I hit: None
+
+What I just did: Ran npm run build
+Why: Converts the source code into files a browser can understand
+Problem: Build failed because the app needs a Convex url
+What I learned: Some apps need environment variables (API keys, URLs) to build
+Real insight: Deployment platforms like Vercel handle this with environment variable settings
+
+=== DAY 1 COMPLETED ===
+
+What I accomplished:
+- Cloned a repo (first one had external dependencies, learned about environment variables)
+- Created a fresh Next.js app using create-next-app
+- Successfully ran npm install
+- Successfully ran npm run build
+- Served it locally and viewed it in browser
+
+What was hardest:
+- Hardest thing was the Convex error. All I saw was that there was an error related to Convex (my ListAI project) and had to use a new app
+
+What I still don't understand:
+- How to read the error related to Convex
