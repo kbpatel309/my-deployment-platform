@@ -1,3 +1,5 @@
+=== DAY 1 START ===
+
 What I just did: Cloned a GitHub repo (my ListAI project) using git clone
 Why: I need the code on my computer to build it
 What I learned: git clone [paste-the-url-you-copied] [name-of-folder-you-want-to-have-cloned-repo]
@@ -37,3 +39,78 @@ What was hardest:
 
 What I still don't understand:
 - How to read the error related to Convex
+
+=== DAY 2 START ===
+
+Pomodoro 1 done - creating file and test python.
+What I did: Created deploy.py function and made a function that accepts a URLs
+What I learned: Learned f-string (or formatted string literal) is Python way to embed expressions in string literal
+Problems: None
+
+Pomodoro 2 done - make it clone repo.
+What I did: Made the Python script actually clone a repo
+What I learned: os module allows you to perform various operations related to operating system
+os.system() runs terminal commands from Python
+os.path module is able to interact with file and directory paths throughout different operating systems
+os.makedirs() allows you to create directories recursively, meaning can create intermediate directories that don't exist along with final target directory
+Problems: - Learned that huge repos (2GB+) can cause issues
+- Windows has filename length limits
+- Removed first test project and switched to smaller test project (leerob/leerob.io)
+
+Pomodoro 3 - installed dependencies.
+What I did:
+- Added npm install to my deploy.py script
+- First attempt failed due to dependency conflicts in the repo
+- Added --legacy-peer-deps flag to handle conflicts
+- Successfully cloned and installed dependencies for a real Next.js project (1088 packages!)
+
+What I learned:
+- os.chdir() changes the working directory so commands run in the right folder
+- Not all repos on GitHub have working dependencies (even popular ones)
+- Real deployment platforms need to handle dependency conflicts
+- --legacy-peer-deps is a way to bypass peer dependency issues
+- npm install can take 2+ minutes for large projects
+- Warnings about deprecated packages are normal and don't break builds
+
+What worked:
+- My script correctly cloned a 14MB repo
+- Dependencies installed successfully with the workaround
+- Script is now ready for final step: building
+
+Problems I hit:
+- Initial repo (Vercel Next.js) was too massive (2GB)
+- Second repo (shadcn taxonomy) had dependency conflicts
+- Fixed with --legacy-peer-deps flag
+
+Pomodoro 4 - run npm build.
+What I did:
+- Added npm run build to complete the automation
+- Script successfully: cloned repo, installed 1088 packages, ran build
+- Build failed due to repo-specific issues (Contentlayer + Windows)
+- Learned that not every repo builds successfully even with correct automation
+
+What I learned:
+- My script works correctly - it automated the entire deployment pipeline
+- Some repos have platform-specific issues (Windows vs Mac/Linux)
+- Real deployment platforms encounter these same issues
+- Error handling is important - my script detected and reported the failure
+- The automation is complete even if individual repos fail
+
+Key insight:
+The goal wasn't to build EVERY repo successfully. The goal was to automate the PROCESS. I did that. Vercel would also fail on this repo without proper config.
+
+What worked:
+✅ Clone automation
+✅ Dependency installation automation  
+✅ Build command execution
+✅ Error detection and reporting
+
+=== DAY 2 ACHIEVEMENT ===
+I have a fully automated deployment script that:
+- Takes any GitHub URL
+- Clones it
+- Installs dependencies
+- Builds it
+- Reports results
+
+
