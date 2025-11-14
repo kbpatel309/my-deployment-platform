@@ -113,4 +113,12 @@ I have a fully automated deployment script that:
 - Builds it
 - Reports results
 
+I just deployed a Next.js app (test-deployment) using automation I wrote.
+My Python script:
+- Installed dependencies
+- Built the production files
+- Started the server
+All with one command python deploy.py
+
+
 
