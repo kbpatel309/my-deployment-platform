@@ -120,5 +120,66 @@ My Python script:
 - Started the server
 All with one command python deploy.py
 
+=== DAY 3 START ===
 
+Pomodoro 1 - Just Get Flask Running 
+What I just did:
+- Imported Flask (a library for making web servers in Python)
+- Created an "app" object
+- Made a "route" - when someone visits /, show this text
+- Started the server on port 5000
 
+What I understand:
+- @app.route('/') means "when someone visits the home page"
+- The function below it decides what to show
+- app.run() starts the web server
+- It's like a Python program that responds to browser requests
+
+What I don't understand yet:
+- Flask syntax (__name__)
+- what __main__ is
+
+Pomodoro 2 - added a simple HTML page.
+What I just did:
+- Created an HTML file in templates folder
+- Changed from returning text to returning an HTML page
+- render_template() tells Flask to load the HTML file
+
+What I understand:
+- Flask looks for HTML files in the 'templates' folder
+- render_template('index.html') loads that file
+- The browser now shows HTML instead of plain text
+- This is how Flask serves web pages
+
+What I still don't understand:
+
+Pomodoro 3 - added a form.
+What I just did:
+- Adden an input box (where users type)
+- Added a button
+- Gave the input an "id" so I can reference it later
+
+What I understand:
+- <input> creates a text box
+- id="github_url" is like naming it so I can find it later
+- The button doesn't do anything yet
+- This is just the visual part (HTML)
+
+What I need to learn next:
+- How to make the button actually DO something
+- How to get the text from the input box
+
+Pomodoro 4 - Make the Button Show What You Typed
+What I just did:
+- Made the button call a function when clicked
+- The function gets the text from the input box
+- Then displays it in the <p> target
+
+What I understand:
+- onclick="showURL()" means "when clicked, run this function"
+- document.getElementById() finds an element by its id
+- .value gets what's in the input box
+- .innerHTML changes what's shown in the paragraph
+
+What I learned by breaking it:
+- when you change the id, 
