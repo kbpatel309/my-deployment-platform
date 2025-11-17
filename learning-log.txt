@@ -182,4 +182,4 @@ What I understand:
 - .innerHTML changes what's shown in the paragraph
 
 What I learned by breaking it:
-- when you change the id, 
+- when you change the id, the button stops working because the JavaScript was targeting the old ID and can't find the old ID
