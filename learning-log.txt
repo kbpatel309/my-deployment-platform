@@ -183,3 +183,63 @@ What I understand:
 
 What I learned by breaking it:
 - when you change the id, the button stops working because the JavaScript was targeting the old ID and can't find the old ID
+
+=== DAY 4 START ===
+
+Pomodoro 1 - Add a Deploy Endpoint.
+What does methods=['POST'] mean?:
+- It specifies that a web route should only respond to HTTP POST requests 
+- POST requests are used to send data to a server, such as from an HTML form, to create or update a resource.
+What's the difference between /deploy route and the /route?:
+- /deploy is a custom route defined for a specific purpose (in this case, related to the app's deployment and infrastructure management)
+- / is the root route and represents the home page or default entry point of a website or app
+What does request.get_json() do?:
+- In Flask, it's a method used to parse incoming JSON request data and return it as a Python object (usually dictionary or list)
+- JSON (JavaScript Object Notation) request data refers to the data sent from a client to a server within the body of an HTTP request
+What does jsonify() do?:
+- The jsonify() function in Flask is used to convert Python data structures into a JSON-formatted response object. 
+- Serializes Data to JSON: It takes provided Python data and converts it into JSON string
+- Creates a Response Object: It then wraps this JSON string within a Flask Response object
+- jsonify() automatically sets Content-Type header of the response to application/json, 
+  which informs client that the received dat is in JSON format, allowing it to be parsed correctly
+
+What does `fetch('/deploy', ...)` do?:
+- It initiates an HTTP request to the /deploy endpoint of the current webser or application.
+- Initiates a Network Request: The fetch() function is called, and the first argument, '/deploy', specifies
+  the URL (or path) of the resource to be fetched. In this case, it's a relative path to an endpoint named
+  deploy on the same origin as the client-side JavaScript
+- Returns a Promise: The fetch() function immediately returns a Promise. This promise will eventually resolve
+  to a Response object once the server responds, or it will reject if a network error occurs.
+What does `method: 'POST'` mean?:
+- In WebDev, method: 'POST' specifies that an HTTP request should use the POST method, which is designed to
+  send data to a server to create a new resource or update the server's Started
+What does `JSON.stringify()` do?:
+- The JSON.stringify() method in JavaScript converts a JavaScript value (usually an object or array) into
+  a JSON-formatted string. This is essential for sending data to a web server or stroing data, as data exchange
+  often requires a string format that is universally understood.
+What does `.then()` do?:
+- In JavaScript, then .then() method is used with Promises to handle the reesults of an asynchronous operation.
+- It accepts two callback functions: one for when the promise is successfully resolved and another for when it
+  is rejected. The .then() method always returns a new Promise, which allows you to chain multiple asynchronous
+  operations together in a readable way.
+  What's the flow: Button click → ??? → Server → ??? → Page updates
+  - Button click: a user interacts with a button on web page, triggering a client-side event handler
+  - Client-side logic/API call: The event handler executes code that typically prepares data and initiates an
+    asynchronous request (like using the fetch() API) to the server.
+  - Server processing: The server receives the request, processes the data (e.g., interacts with a database,
+    performs calculations), and prepares a response.
+  - Data return/Server response: The server sends a response back to the client, usually in a structured format
+    like JSON.
+  - Client-side handling of response: Client-side JavaScript receives the response, parses the data, and
+    manipulates the Document Object Model (DOM) of the web page to reflect the new information without requiring
+    a full page reload.
+  - Page updates: The user sees the changes on the page (e.g., new content appears, an element is hidden, a value
+    is updated).
+
+Break it on purpose:
+- Change /deploy to /deploy2 in ONE place, you get SyntaxError: Unexpected token '<', "
+- Change github_url to url in ONE place, you get SyntaxError: Unexpected token '<', "
+
+
+
+
