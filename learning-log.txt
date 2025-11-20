@@ -240,6 +240,13 @@ Break it on purpose:
 - Change /deploy to /deploy2 in ONE place, you get SyntaxError: Unexpected token '<', "
 - Change github_url to url in ONE place, you get SyntaxError: Unexpected token '<', "
 
+What I built:
+- I added a deploy endpoint to learn how to make Flash receive data from my HTML form and respond back.
+
+The request-response flow:
+1. It is a fundamental communication pattern where a client, like a web browser, sends an HTTP request to a server, which process request and sends back a response.
+2. 
+
 
 
 
