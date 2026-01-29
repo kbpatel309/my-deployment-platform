@@ -248,11 +248,3 @@ The request-response flow:
 2. The cycle involves the client creating a request with details like the URL and method, sending it over the internet, the server interpreting it, generating data,
    and then sending that data back to the client, which renders it for the user.
 
-
-
-
-
-
-
-
-
