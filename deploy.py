@@ -49,3 +49,4 @@ print("✅ Build complete!")
 print("🌐 Starting server...")
 os.system('npm run start')
 
+
