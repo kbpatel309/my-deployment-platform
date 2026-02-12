@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, jsonify
 # Create an instance of the Flask class
 app = Flask(__name__)
 
-# Define a route for the root URL
+# Define a route for the root URL (when someone visits the home page)
 @app.route('/')
 
 # Define a view function associated with the route
