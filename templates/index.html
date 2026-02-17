@@ -11,7 +11,34 @@
 
     <p id="output"></p>
 
-    <script></script>
+    <script>
+        function deploy() {
+            // Get what the user typed
+            var url = document.getElementById('github_url').value;
+
+            // Show we're starting
+            document.getElementById('output').innerHTML = "⏳ Sending to server...";
+
+            // Send to Flask backend
+            fetch('/deploy', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    github_url: url
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Show the response from Flask
+                document.getElementById('output').innerHTML = "✅ " + data.message;
+            })
+            .catch(error => {
+                document.getElementById('output').innerHTML = "❌ Error: " + error;
+            });
+        }
+    </script>
 </body>
 
 </html>
