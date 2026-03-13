@@ -10,3 +10,7 @@ def deploy_site(github_url, project_name):
     clone_command = f"git clone {github_url} deployments/{project_name}"
     os.system(clone_command)
     print(f"Cloned!")
+
+    # Install Dependencies
+    print(f"Installing Dependencies")
+    os.chdir(f'deployments/{project_name}')
