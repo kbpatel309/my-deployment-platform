@@ -14,3 +14,5 @@ def deploy_site(github_url, project_name):
     # Install Dependencies
     print(f"Installing Dependencies")
     os.chdir(f'deployments/{project_name}')
+
+    
