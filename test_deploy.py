@@ -15,4 +15,17 @@ def deploy_site(github_url, project_name):
     print(f"Installing Dependencies")
     os.chdir(f'deployments/{project_name}')
 
-    
+    # Use --legacy-peer-deps to handle dependency conflicts
+    os.system('npm install --legacy-peer-deps')
+
+    print(f"Dependencies installed")
+
+    # New: Build the project
+    print(f"Building project")
+    result = os.system("npm run build")
+
+    if result == 0:
+        print(f"Build complete!")
+        print(f"Deployment finished!")
+    else:
+        print(f"Build failed!")
