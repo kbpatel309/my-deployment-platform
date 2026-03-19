@@ -1,17 +1,10 @@
-import os
+# Import the Flask class from the flask package
 
-# change directory to test deployment
-os.chdir("test-deployment")
+# Create an instance of the Flask class
 
-# installing dependencies
-os.system("npm run install")
+# Define a route for the root URL (when someone visits home page)
 
-# building project
-os.system("npm run build")
-
-# build complete
-# starting server
-os.system("npm run start")
+# Define a view function associated with the route
 
 
 
